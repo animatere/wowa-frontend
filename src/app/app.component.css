@@ -1,0 +1,41 @@
+body{
+    font-family: monospace;
+}
+
+.TimosKleineStube{
+    margin-bottom: 5%;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: monospace;
+}
+
+thead {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+th {
+  padding: 12px;
+  text-align: left;
+  font-family: monospace;
+  font-size: 20px;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+td {
+  padding: 8px;
+  font-family: monospace;
+  padding-left: 0.5%;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
