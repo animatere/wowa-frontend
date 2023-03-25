@@ -17,6 +17,7 @@ import { MainpageComponent } from './mainpage/mainpage.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MainCardComponent } from './main-card/main-card.component';
 import { PlayerCardComponent } from './player-card/player-card.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PlayerCardComponent } from './player-card/player-card.component';
     MainpageComponent,
     DashboardComponent,
     MainCardComponent,
-    PlayerCardComponent
+    PlayerCardComponent,
+    NavbarComponent
   ],
   imports: [
     FormsModule,
