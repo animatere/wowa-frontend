@@ -1,57 +1,7 @@
-<h1>{{title}}</h1>
-<!-- <div ngIf="timoStinkt">
-  <h2 style="color:green;" >Stinkt Timo? {{timoStinkt}}</h2>
-</div>
-<div ngIf="!timoStinkt">
-  <h2 style="color:red;" >Stinkt Timo? {{timoStinkt}}</h2>
-</div> -->
-
-<button type="button" class="btn btn-primary">Primary</button>
-<button type="button" class="btn btn-secondary">Secondary</button>
-<button type="button" class="btn btn-success">Success</button>
-<button type="button" class="btn btn-danger">Danger</button>
-<button type="button" class="btn btn-warning">Warning</button>
-<button type="button" class="btn btn-info">Info</button>
-<button type="button" class="btn btn-light">Light</button>
-<button type="button" class="btn btn-dark">Dark</button>
-
-<button type="button" class="btn btn-link">Link</button>
-
-<div class="TimosKleineStube">
-  <p-table
-      [value]="productList"
-      [paginator]="true"
-      [rows]="5"
-      [showCurrentPageReport]="true"
-      [tableStyle]="{ 'min-width': '50rem' }"
-      currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
-      [rowsPerPageOptions]="[10, 25, 50]"
-  >
-      <ng-template pTemplate="header">
-          <tr>
-              <th style="width:33%">Title</th>
-              <th style="width:33%">Description</th>
-              <th style="width:33%">Price</th>
-          </tr>
-      </ng-template>
-      <ng-template pTemplate="body" let-customer>
-          <tr>
-            <td>{{ customer.title }}</td>
-            <td>{{ customer.description }}</td>
-            <td>{{ customer.price }}</td>
-          </tr>
-      </ng-template>
-      <ng-template pTemplate="paginatorleft">
-          <p-button type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>
-      </ng-template>
-      <ng-template pTemplate="paginatorright">
-          <p-button type="button" icon="pi pi-cloud" styleClass="p-button-text"></p-button>
-      </ng-template>
-  </p-table>
-</div>
-
-<div class="card flex justify-content-center">
-  <p-multiSelect [options]="cities" [(ngModel)]="selectedCities" optionLabel="name"></p-multiSelect>
-</div>
-
-
+<nav>
+    <ul>
+        <li><a routerLink="/home">Home</a></li>
+        <li><a routerLink="/main">Main</a></li>
+    </ul>
+</nav>
+<router-outlet></router-outlet>

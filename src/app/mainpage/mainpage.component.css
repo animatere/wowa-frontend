@@ -1,0 +1,70 @@
+body{
+    width:90em;
+    margin: 5vh;
+    height: 600px;
+    border: black solid 2px;
+    /* background-image: url("C:\Users\anima\Downloads\3461470.jpg"); */
+    background-color: burlywood;
+}
+
+.Row {
+    display: table;
+    width: 80%; 
+    margin-left: 10%;
+    margin-right: 10%;
+    table-layout: fixed; 
+    border-spacing: 10px; 
+}
+
+.Column {
+    min-width: 10%;
+    max-width: 10%;
+    height: 190px;
+    padding: 2%;
+    margin-right: 5%;
+    float: left;
+    /* display: table-cell; */
+    border: solid black 1px;
+}
+
+.player-grid {
+    display:flex;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 15px;
+    padding-left: 8.5em;
+    padding-right: 15em;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    border: 3px solid red;
+
+}
+
+.player-item {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10em;
+    height: 190px;
+    border: 1px solid black;
+}
+
+.main-grid {
+display:flex;
+grid-template-columns: repeat(5, 1fr);
+grid-gap: 20px;
+padding-left: 40em;
+padding-right: 40em;
+margin-top: 10vh;
+margin-bottom: 10vh;
+border: 3px solid blueviolet;
+
+}
+
+.main-item {    
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 10em;
+height: 190px;
+border: 1px solid black;
+}

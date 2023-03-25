@@ -8,15 +8,23 @@ import { TableModule } from 'primeng/table';
 import { AccordionModule } from 'primeng/accordion';
 import { PanelModule } from 'primeng/panel';
 import { ButtonModule } from 'primeng/button';
-import { ProductService } from './product-service.service';
+import { ProductService } from '../Services/product-service.service';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { SidebarModule } from 'primeng/sidebar';
 import { ToolbarModule } from 'primeng/toolbar';
 import { MultiSelectModule } from 'primeng/multiselect';
+import { MainpageComponent } from './mainpage/mainpage.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { MainCardComponent } from './main-card/main-card.component';
+import { PlayerCardComponent } from './player-card/player-card.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainpageComponent,
+    DashboardComponent,
+    MainCardComponent,
+    PlayerCardComponent
   ],
   imports: [
     FormsModule,
