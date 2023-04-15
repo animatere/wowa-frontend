@@ -18,6 +18,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MainCardComponent } from './main-card/main-card.component';
 import { PlayerCardComponent } from './player-card/player-card.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { CardGeneratorComponent } from './card-generator/card-generator.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     DashboardComponent,
     MainCardComponent,
     PlayerCardComponent,
-    NavbarComponent
+    NavbarComponent,
+    CardGeneratorComponent,
+    AdminDashboardComponent
   ],
   imports: [
     FormsModule,
