@@ -1,9 +1,8 @@
 body{
-    width:90em;
+    /* width:90em;
     margin: 5vh;
-    height: 600px;
+    height: 600px; */
     border: black solid 2px;
-    /* background-image: url("C:\Users\anima\Downloads\3461470.jpg"); */
     background-color: burlywood;
 }
 
