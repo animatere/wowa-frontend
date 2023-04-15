@@ -1,11 +1,13 @@
-export interface productModel {
+export interface Card {
     id: string;
-    title: string;
-    description: string;
-    price: number;
+    type: string;
+    cardText: string;
+    category: string;
   }
 
-  export interface City {
-    code?: string;
-    name?: string;
+  export interface repos {
+    id: string;
+    name: string;
+    html_url: string;
+    description: string;
 }

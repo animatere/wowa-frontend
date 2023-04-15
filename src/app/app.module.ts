@@ -8,7 +8,6 @@ import { TableModule } from 'primeng/table';
 import { AccordionModule } from 'primeng/accordion';
 import { PanelModule } from 'primeng/panel';
 import { ButtonModule } from 'primeng/button';
-import { ProductService } from '../Services/product-service.service';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { SidebarModule } from 'primeng/sidebar';
 import { ToolbarModule } from 'primeng/toolbar';
@@ -20,6 +19,8 @@ import { PlayerCardComponent } from './player-card/player-card.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CardGeneratorComponent } from './card-generator/card-generator.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { CardService } from 'src/Services/card.service';
+
 
 @NgModule({
   declarations: [
@@ -47,7 +48,7 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
     MultiSelectModule
     
   ],
-  providers: [ProductService],
+  providers: [CardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

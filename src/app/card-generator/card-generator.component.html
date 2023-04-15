@@ -1,1 +1,26 @@
 <h1>Card Generator here</h1>
+<!-- <button type="button" class="btn btn-success" (click)="getCards()">Schick mal ab hihi</button> -->
+
+
+
+
+
+<div>
+    <span>Card Text</span><br>
+    <input type="text" id="name" [(ngModel)]="cardText"><br>
+
+    <label for="sel1" class="form-label">Type</label>
+    <select class="form-select" id="sel1" name="sellist1">
+      <option>Main card</option>
+      <option>Hand card</option>
+    </select><br>
+
+    <label for="sel1" class="form-label">Category</label>
+    <select class="form-select" id="sel1" name="sellist1">
+      <option>Star Wars</option>
+      <option>Flat Earth</option>
+      <option>Second World War</option>
+      <option>Querdenker</option>
+    </select><br>
+    <input type="button" (click)="createCard()" value="Update Name">
+</div>
