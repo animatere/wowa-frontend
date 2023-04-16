@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,7 +19,7 @@ import { PlayerCardComponent } from './player-card/player-card.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CardGeneratorComponent } from './card-generator/card-generator.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
-import { CardService } from 'src/Services/card.service';
+import { CardService } from 'src/services/card.service';
 
 
 @NgModule({
@@ -35,6 +35,7 @@ import { CardService } from 'src/Services/card.service';
   ],
   imports: [
     FormsModule,
+    ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,

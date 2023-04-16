@@ -1,0 +1,8 @@
+.CardGenerator {
+    /* height: 300px; */
+    width: 50%;
+    margin-left:25%;
+    margin-right:25%;
+    border:solid black 1px;
+    padding: 10px;
+}
