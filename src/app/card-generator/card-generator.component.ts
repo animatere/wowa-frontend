@@ -1,5 +1,5 @@
 import { Component, Injectable } from '@angular/core';
-import { repos } from'../../models/Models';
+import { Card } from'../../models/Models';
 import { CardService } from 'src/services/card.service';
 import { CardType, CardCategory } from'../../enums/Enums';
 import { FormControl, FormGroup } from '@angular/forms'
@@ -12,7 +12,7 @@ import { FormControl, FormGroup } from '@angular/forms'
 
 export class CardGeneratorComponent {
 
-  results: any;
+  cardCollection: Card[] = [];
 
   cardCategory = CardCategory;
     categoryKeys: string[] =[];
@@ -27,20 +27,18 @@ export class CardGeneratorComponent {
   });
  
   constructor(private cardService: CardService) {
-    this.categoryKeys = Object.keys(this.cardCategory);
-    this.typeKeys = Object.keys(this.cardType);
-    console.log(this.categoryKeys);
-    console.log(this.typeKeys);
-    console.log(this.cardCategory);
+    this.categoryKeys = Object.values(this.cardCategory);
+    this.typeKeys = Object.values(this.cardType);
   }
  
   public getCards() {
     this.cardService.getCards()
       .subscribe(
         (response) => {
-          console.log('response received')
-          this.results = response; 
-          console.log(this.results);
+          this.cardCollection = response; 
+          console.log(this.cardCollection);
+        }, (error) => {
+          console.log(error);
         }
       )
   }
@@ -66,8 +64,12 @@ export class CardGeneratorComponent {
     this.cardService.createCard(cardText, cardType, cardCategory)
       .subscribe(
         (response) => {
-          this.results = response; 
-          console.log(this.results);
+          console.log(response);
+          this.Card = new FormGroup({
+            cardText: new FormControl<string>(''),
+            cardType: new FormControl<string>(''),
+            cardCategory: new FormControl<string>('')
+          });
         }
       )
   }

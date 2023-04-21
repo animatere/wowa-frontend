@@ -1,10 +1,10 @@
 export enum CardType {
-    MainCard = "MainCard",
-    PlayerCard = "PlayerCard"
+    MainCard = "Main Card",
+    PlayerCard = "Player Card"
 }
 
 export enum CardCategory {
     StarWars = "Star Wars",
-    FlatEarth = "FlatEarth",
-    SecondWorldWar = "SecondWorldWar"
+    FlatEarth = "Flat Earth",
+    SecondWorldWar = "Second World War"
 }
