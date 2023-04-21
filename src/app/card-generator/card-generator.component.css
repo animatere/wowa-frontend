@@ -6,3 +6,10 @@
     border:solid black 1px;
     padding: 10px;
 }
+
+.CardGenerator select { 
+    width:180px; 
+}
+.CardGenerator input { 
+    width:180px; 
+}

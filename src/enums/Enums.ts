@@ -1,10 +1,10 @@
-export const enum CardType {
-    MainCard,
-    PlayerCard
+export enum CardType {
+    MainCard = "MainCard",
+    PlayerCard = "PlayerCard"
 }
 
-export const enum CardCategory {
-    StarWars,
-    FlatEarth,
-    SecondWorldWar
+export enum CardCategory {
+    StarWars = "Star Wars",
+    FlatEarth = "FlatEarth",
+    SecondWorldWar = "SecondWorldWar"
 }

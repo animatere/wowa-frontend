@@ -12,11 +12,18 @@
           <label>
             Card Type:
           </label><br>
-          <input type="text" required formControlName="cardType"><br>
+          <select required formControlName="cardType">
+            <option value='' disabled selected>Select Card Type</option>
+            <option *ngFor="let name of typeKeys" [value]="name"> {{name}} </option>
+          </select><br>
           <label>
             Card Category:
           </label><br>
-          <input type="text" required formControlName="cardCategory"><br><br>
+          <select required formControlName="cardCategory">
+            <option value='' disabled selected>Select Category</option>
+            <option *ngFor="let name of categoryKeys" [value]="name"> {{name}} </option>
+          </select><br><br>
+          <!-- <input type="text" required formControlName="cardCategory"><br><br> -->
           <button class="btn btn-success" type="submit">Create Card</button>
         </form>
       </div>

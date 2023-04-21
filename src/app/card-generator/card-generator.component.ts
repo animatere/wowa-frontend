@@ -1,7 +1,7 @@
 import { Component, Injectable } from '@angular/core';
 import { repos } from'../../models/Models';
 import { CardService } from 'src/services/card.service';
-import { CardType } from'../../enums/Enums';
+import { CardType, CardCategory } from'../../enums/Enums';
 import { FormControl, FormGroup } from '@angular/forms'
 
 @Component({
@@ -14,6 +14,12 @@ export class CardGeneratorComponent {
 
   results: any;
 
+  cardCategory = CardCategory;
+    categoryKeys: string[] =[];
+
+  cardType = CardType;
+    typeKeys: string[] =[];
+
   Card = new FormGroup({
     cardText: new FormControl<string>(''),
     cardType: new FormControl<string>(''),
@@ -21,7 +27,11 @@ export class CardGeneratorComponent {
   });
  
   constructor(private cardService: CardService) {
-
+    this.categoryKeys = Object.keys(this.cardCategory);
+    this.typeKeys = Object.keys(this.cardType);
+    console.log(this.categoryKeys);
+    console.log(this.typeKeys);
+    console.log(this.cardCategory);
   }
  
   public getCards() {
