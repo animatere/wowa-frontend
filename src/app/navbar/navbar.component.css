@@ -2,7 +2,7 @@
     background: #2d2d7f !important;
   }
   [data-target="#mainMenu"] {
-    position: relative;
+    position: relative; 
     z-index: 999;
   }
   
@@ -61,13 +61,14 @@
   }
   
   .main-header {
-    position: fixed;
+    background-color: #30DBD3;
     top: 25px;
     left: 0;
     z-index: 99;
     width: 100%;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
+    margin-bottom: 20px;
   }
   
   .main-header.fixed-nav {
