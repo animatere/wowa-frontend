@@ -1,8 +1,9 @@
-import { Component, Injectable } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Card } from'../../models/Models';
 import { CardService } from 'src/services/card.service';
 import { CardType, CardCategory } from'../../enums/Enums';
 import { FormControl, FormGroup } from '@angular/forms'
+import { AngularToastService } from "angular-toasts";
 
 @Component({
   selector: 'card-generator-component',
@@ -10,15 +11,13 @@ import { FormControl, FormGroup } from '@angular/forms'
   styleUrls: ['./card-generator.component.css']
 })
 
-export class CardGeneratorComponent {
+export class CardGeneratorComponent implements OnInit {
 
   cardCollection: Card[] = [];
-
   cardCategory = CardCategory;
-    categoryKeys: string[] =[];
-
+  categoryKeys: string[] =[];
   cardType = CardType;
-    typeKeys: string[] =[];
+  typeKeys: string[] =[];
 
   Card = new FormGroup({
     cardText: new FormControl<string>(''),
@@ -26,9 +25,13 @@ export class CardGeneratorComponent {
     cardCategory: new FormControl<string>('')
   });
  
-  constructor(private cardService: CardService) {
+  constructor(private cardService: CardService, private _toast: AngularToastService) {
     this.categoryKeys = Object.values(this.cardCategory);
     this.typeKeys = Object.values(this.cardType);
+  }
+
+  ngOnInit() {
+    this.getCards();
   }
  
   public getCards() {
@@ -36,11 +39,19 @@ export class CardGeneratorComponent {
       .subscribe(
         (response) => {
           this.cardCollection = response; 
-          console.log(this.cardCollection);
+          this._toast.success("Success", "Successfully fetched cards from server.");
         }, (error) => {
-          console.log(error);
+          this._toast.error("Error", "Error while fetching cards from server.");
         }
       )
+  }
+
+  public refreshForm () {
+    this.Card = new FormGroup({
+      cardText: new FormControl<string>(''),
+      cardType: new FormControl<string>(''),
+      cardCategory: new FormControl<string>('')
+    })
   }
 
   public createCard() {
@@ -65,11 +76,11 @@ export class CardGeneratorComponent {
       .subscribe(
         (response) => {
           console.log(response);
-          this.Card = new FormGroup({
-            cardText: new FormControl<string>(''),
-            cardType: new FormControl<string>(''),
-            cardCategory: new FormControl<string>('')
-          });
+          this.refreshForm();
+          this._toast.success("Success", "Successfully created card!");
+        }, (error) => {
+          this._toast.error("Error", "Error while creating card!");
+          console.log(error);
         }
       )
   }
