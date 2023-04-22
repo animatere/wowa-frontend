@@ -29,6 +29,13 @@ export class CardGeneratorComponent {
   constructor(private cardService: CardService) {
     this.categoryKeys = Object.values(this.cardCategory);
     this.typeKeys = Object.values(this.cardType);
+
+    this.getCards()
+
+    var mainCards = this.cardCollection
+
+    const randomElement = this.cardCollection[Math.floor(Math.random() * this.cardCollection.length)];
+    console.log(randomElement);
   }
  
   public getCards() {
