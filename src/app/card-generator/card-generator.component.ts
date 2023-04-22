@@ -1,6 +1,6 @@
 import { Component, Injectable } from '@angular/core';
 import { Card } from'../../models/Models';
-import { CardService } from 'src/services/card.service';
+import { CardService } from '../../services/card.service';
 import { CardType, CardCategory } from'../../enums/Enums';
 import { FormControl, FormGroup } from '@angular/forms';
 import { AngularToastService } from "angular-toasts";
@@ -44,12 +44,18 @@ export class CardGeneratorComponent {
       .subscribe(
         (response) => {
           this.cardCollection = response; 
-          console.log(this.cardCollection);
         }, (error) => {
-          console.log(error);
           this._toast.error("Error", "Error while fetching card.");
         }
       )
+  }
+
+  public refreshForm() {
+    this.Card = new FormGroup({
+      cardText: new FormControl<string>(''),
+      cardType: new FormControl<string>(''),
+      cardCategory: new FormControl<string>('')
+    });
   }
 
   public createCard() {
@@ -72,12 +78,7 @@ export class CardGeneratorComponent {
     this.cardService.createCard(cardText, cardType, cardCategory)
       .subscribe(
         (response) => {
-          console.log(response);
-          this.Card = new FormGroup({
-            cardText: new FormControl<string>(''),
-            cardType: new FormControl<string>(''),
-            cardCategory: new FormControl<string>('')
-          });
+          this.refreshForm();
           this._toast.success("Success", "Card was created.");
         }, (error) => {
           console.log(error);
