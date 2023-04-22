@@ -8,6 +8,6 @@ export enum CardCategory {
     FlatEarth = "Flat Earth",
     SecondWorldWar = "Second World War",
     Gaming = "Gaming",
-    TvShows ="Tv shows",
+    TvShows ="TV Shows",
     General = "General"
 }
