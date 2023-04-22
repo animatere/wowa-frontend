@@ -6,5 +6,8 @@ export enum CardType {
 export enum CardCategory {
     StarWars = "Star Wars",
     FlatEarth = "Flat Earth",
-    SecondWorldWar = "Second World War"
+    SecondWorldWar = "Second World War",
+    Gaming = "Gaming",
+    TvShows ="Tv shows",
+    General = "General"
 }
