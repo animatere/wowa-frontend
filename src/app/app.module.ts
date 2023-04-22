@@ -20,7 +20,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { CardGeneratorComponent } from './card-generator/card-generator.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { CardService } from 'src/services/card.service';
-import { AngularToastModule } from "angular-toasts";
 
 
 @NgModule({
@@ -47,8 +46,7 @@ import { AngularToastModule } from "angular-toasts";
     SelectButtonModule,
     SidebarModule,
     ToolbarModule,
-    MultiSelectModule,
-    AngularToastModule
+    MultiSelectModule
     
   ],
   providers: [CardService],
