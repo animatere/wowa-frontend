@@ -21,6 +21,9 @@ import { CardGeneratorComponent } from './card-generator/card-generator.componen
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { CardService } from 'src/services/card.service';
 import { AngularToastModule } from "angular-toasts";
+import { GameboardComponent } from './gameboard/gameboard.component';
+import { ModalComponent } from './modal/modal.component';
+import { MdbModalService } from 'mdb-angular-ui-kit/modal';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,9 @@ import { AngularToastModule } from "angular-toasts";
     PlayerCardComponent,
     NavbarComponent,
     CardGeneratorComponent,
-    AdminDashboardComponent
+    AdminDashboardComponent,
+    GameboardComponent,
+    ModalComponent
   ],
   imports: [
     FormsModule,
@@ -47,10 +52,9 @@ import { AngularToastModule } from "angular-toasts";
     SidebarModule,
     ToolbarModule,
     MultiSelectModule,
-    AngularToastModule
-    
+    AngularToastModule    
   ],
-  providers: [CardService],
+  providers: [CardService, MdbModalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

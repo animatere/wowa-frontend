@@ -1,0 +1,26 @@
+.Row {
+    display: table;
+    width: 100%; /*Optional*/
+    table-layout: fixed; /*Optional*/
+
+}
+.Column {
+    display: table-cell;
+    border:solid black 1px;
+    padding:10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.Column .card-body{
+    margin-bottom:50px;
+}
+
+.container{
+    display:flex;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+    padding:10px;
+    justify-content: center;
+    align-items: center;
+}
