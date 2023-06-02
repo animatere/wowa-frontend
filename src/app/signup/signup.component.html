@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <body>
+      <div class="CardGenerator">
+        <h1>You can create a User here</h1>
+
+        <form [formGroup]="User" (ngSubmit)="createUser()">
+          <label>
+            Username:
+          </label><br>
+          <input type="text" required="true" formControlName="userName"><br>
+          <label>
+            Userpw:
+          </label><br>
+          <input type="password" required="true" formControlName="userPassword"><br>
+          <label>
+            User role:
+          </label><br>
+          <select required formControlName="userRole">
+            <option value='' disabled selected>Select Role</option>
+            <option *ngFor="let role of roleKeys" [value]="role"> {{role}} </option>
+          </select><br><br>
+          <!-- <input type="text" required formControlName="cardCategory"><br><br> -->
+          <button class="btn btn-success" type="submit">Create Account</button>
+        </form>
+      </div>
+    </body>
+</html>

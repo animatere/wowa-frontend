@@ -11,3 +11,8 @@ export enum CardCategory {
     TvShows ="TV Shows",
     General = "General"
 }
+
+export enum UserRole {
+    Admin = "Admin",
+    User = "User"
+}

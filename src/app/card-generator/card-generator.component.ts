@@ -1,5 +1,5 @@
 import { Component, Injectable } from '@angular/core';
-import { Card } from'../../models/Models';
+import { Card } from'src/models/Models';
 import { CardService } from '../../services/card.service';
 import { CardType, CardCategory } from'../../enums/Enums';
 import { FormControl, FormGroup } from '@angular/forms';

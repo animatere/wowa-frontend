@@ -4,3 +4,10 @@ export interface Card {
     cardText: string;
     category: string;
 }
+
+export interface User {
+    id: string;
+    userRole: string;
+    userName: string;
+    userPassword: string;
+}

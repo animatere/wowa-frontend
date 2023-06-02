@@ -24,6 +24,8 @@ import { AngularToastModule } from "angular-toasts";
 import { GameboardComponent } from './gameboard/gameboard.component';
 import { ModalComponent } from './modal/modal.component';
 import { MdbModalService } from 'mdb-angular-ui-kit/modal';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { MdbModalService } from 'mdb-angular-ui-kit/modal';
     CardGeneratorComponent,
     AdminDashboardComponent,
     GameboardComponent,
-    ModalComponent
+    ModalComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     FormsModule,
