@@ -84,6 +84,6 @@ export class SignupComponent {
           debugger;
           this._toast.error("Error", "Error while creating User.");
         }
-      )
+    )
   }
 }

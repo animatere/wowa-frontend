@@ -18,4 +18,7 @@ export class UserService {
   createUser(userRole:string, userName:string, userPassword:string): Observable<any> {
     return this.httpClient.post(this.baseURL + "/user", {userRole: userRole, userName: userName, userPassword: userPassword})
   }
+  loginUser(userName:string, userPassword:string): Observable<any> {
+    return this.httpClient.post(this.baseURL + "/user/login", {userName: userName, userPassword: userPassword})
+  }
 }
